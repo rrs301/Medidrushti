@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.innocruts.medidrusti">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- GCM connects to Google Services. -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/medilogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/medilogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="icon">
+        <activity
+            android:name=".MobileVerification"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".OTP_Check"
+            android:label="@string/app_name"
+            android:parentActivityName=".MobileVerification">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.MobileVerification" />
+        </activity>
+        <activity
+            android:name=".WebViewActivity"
+            android:label="@string/title_activity_web_view"></activity>
+        <activity
+            android:name=".GetSubCategory"
+            android:label="@string/app_name"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.MyActivity" />
+        </activity>
+        <activity
+            android:name=".GetPostData"
+            android:label="@string/app_name"
+            android:parentActivityName=".GetSubCategory"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.GetSubCategory" />
+        </activity>
+        <activity
+            android:name=".DetailPostView"
+            android:label="@string/app_name"
+            android:parentActivityName=".GetPostData">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.GetPostData" />
+        </activity>
+        <activity
+            android:name=".News"
+            android:label="@string/title_activity_news"
+            android:parentActivityName=".MyActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.MyActivity" />
+        </activity>
+        <activity
+            android:name=".Buy_sell_activity"
+            android:label="@string/app_name"
+            android:parentActivityName=".MyActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.MyActivity" />
+        </activity>
+        <activity
+            android:name=".Buy_Sell_Menu"
+            android:label="@string/title_activity_buy__sell__menu"
+            android:parentActivityName=".Buy_sell_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.Buy_sell_activity" />
+        </activity>
+        <activity
+            android:name=".StoreSellBanner"
+            android:label="@string/title_activity_store_sell_banner"></activity>
+        <activity
+            android:name=".Sell_Rent_Detail_Activity"
+            android:label="@string/app_name"
+            android:parentActivityName=".Buy_sell_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.Buy_sell_activity" />
+        </activity>
+        <activity
+            android:name=".Post_Ad"
+            android:label="@string/title_activity_post__ad"
+            android:parentActivityName=".Buy_sell_activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.Buy_sell_activity" />
+        </activity>
+        <activity
+            android:name=".Offer_Event"
+            android:label="@string/title_activity_offer__event"
+            android:parentActivityName=".MyActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.MyActivity" />
+        </activity>
+        <activity
+            android:name=".animation"
+            android:label="@string/title_activity_animation"></activity>
+        <activity
+            android:name=".ThankYouPage"
+            android:label="@string/title_activity_thank_you_page"></activity>
+        <activity
+            android:name=".popup_image"
+            android:label="@string/title_activity_popup_image"></activity>
+        <activity
+            android:name=".ShareAppPage"
+            android:label="@string/title_activity_share_app_page"
+            android:parentActivityName=".MyActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.innocruts.medidrusti.MyActivity" />
+        </activity>
+        <activity
+            android:name=".DownloadAcitivity"
+            android:label="@string/title_activity_share_app_page"></activity>
+        <activity
+            android:name=".OfflineData"
+            android:label="@string/title_activity_share_app_page"></activity>
+        <activity
+            android:name=".ContactUs"
+            android:label="@string/title_activity_share_app_page"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"></activity>
+        <activity
+            android:name=".LocationSearch"
+            android:label="@string/title_activity_share_app_page"></activity>
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/title_activity_share_app_page"></activity>
+        <activity android:name=".SocialMedia"></activity>
+    </application>
+
+</manifest>
